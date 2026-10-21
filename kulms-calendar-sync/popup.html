@@ -1,0 +1,10 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
+body{font:14px system-ui;width:360px;margin:18px;color:#17202a}button{padding:9px;border:1px solid #bbb;border-radius:7px;background:#f4f4f4;cursor:pointer}button.primary{background:#1967d2;color:white;border:0}label{display:block;margin-top:13px;font-weight:600}input,textarea{box-sizing:border-box;width:100%;padding:8px;margin-top:4px;border:1px solid #aaa;border-radius:6px}textarea{height:90px;font:12px monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px monospace;background:#f4f4f4;padding:10px;border-radius:6px}small{color:#555}
+</style></head><body>
+<h3>KULMS → Google Calendar</h3><p><small>締切24時間前・5分間の予定／提出後または締切到来後に削除</small></p>
+<button id="connect" class="primary">Googleアカウントを接続</button> <button id="sync">今すぐ同期</button>
+<label>同期先カレンダーID</label><input id="calendarId" value="primary"><small>通常は primary のままでOK</small>
+<label>授業名の上書き（JSON形式）</label><textarea id="overrides" placeholder='{"授業ID":"授業名"}'>{}</textarea>
+<button id="save">設定を保存</button>
+<h4>状態</h4><pre id="status">読み込み中...</pre>
+<script src="popup.js"></script></body></html>

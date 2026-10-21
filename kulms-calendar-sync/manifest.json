@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "KULMS Calendar Sync",
+  "version": "0.5.0",
+  "description": "KULMS課題の期限24時間前の予定をGoogleカレンダーに同期し、提出後または締切後に削除",
+  "permissions": ["webNavigation", "storage", "identity", "alarms"],
+  "host_permissions": [
+    "https://lms.gakusei.kyoto-u.ac.jp/*",
+    "https://www.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "REPLACE_WITH_YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.events",
+      "https://www.googleapis.com/auth/calendar.calendars.readonly"
+    ]
+  },
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html"}
+}
